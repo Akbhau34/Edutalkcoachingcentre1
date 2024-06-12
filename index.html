@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTalk Coaching Centre</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #87CEEB, #FFDEE9);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #0059b3;
+            color: white;
+            width: 100%;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            border-bottom: 2px solid black;
+        }
+        h1 {
+            margin: 0;
+            font-size: 3em;
+            font-weight: 600;
+        }
+        h2 {
+            margin: 10px 0 0;
+            font-weight: normal;
+            font-size: 1.5em;
+        }
+        .logo {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #FFCC00;
+        }
+        .content, .enrollment-content {
+            text-align: center;
+            padding: 30px;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            display: none;
+            border: 2px solid black;
+            transition: all 0.3s ease-in-out;
+        }
+        .content.show, .enrollment-content.show {
+            display: block;
+        }
+        .courses {
+            margin: 20px 0;
+        }
+        .courses a {
+            text-decoration: none;
+            color: #0059b3;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .courses a:hover {
+            color: #FFCC00;
+        }
+        .contact {
+            margin-top: 20px;
+        }
+        .dialog-box {
+            border: 2px solid #0059b3;
+            padding: 20px;
+            background-color: #e6f0ff;
+            display: inline-block;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 2px solid black;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .dialog-box button {
+            background-color: #0059b3;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50px;
+            border: 2px solid black;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .dialog-box button:hover {
+            background-color: #004080;
+            transform: scale(1.05);
+        }
+        .details p {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .back-button {
+            margin-top: 20px;
+        }
+        .back-button button {
+            background-color: #0059b3;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50px;
+            border: 2px solid black;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .back-button button:hover {
+            background-color: #004080;
+            transform: scale(1.05);
+        }
+        .founder {
+            margin-top: 20px;
+            border: 2px solid black;
+            padding: 10px;
+            background-color: #e6f0ff;
+            border-radius: 10px;
+        }
+        .public-note {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #ff0000;
+        }
+        .additional-info {
+            margin-top: 20px;
+            font-size: 1em;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+    <script>
+        function showEnrollmentDetails() {
+            document.querySelector('.content').classList.remove('show');
+            document.querySelector('.enrollment-content').classList.add('show');
+        }
+
+        function showMainPage() {
+            document.querySelector('.content').classList.add('show');
+            document.querySelector('.enrollment-content').classList.remove('show');
+        }
+
+        // Initialize the main page to be visible on load
+        window.onload = function() {
+            showMainPage();
+        };
+    </script>
+</head>
+<body>
+
+<header>
+    <div class="logo"><i class="fas fa-graduation-cap"></i> EduTalk</div>
+    <h1>EduTalk Coaching Centre</h1>
+    <h2>Education at its best</h2>
+</header>
+
+<div class="content show">
+    <p>Address: Reckjoani, Rajarhat</p>
+
+    <div class="courses">
+        <h3>Courses Offered:</h3>
+        <p>
+            <a href="#">Physics</a> |
+            <a href="#">Chemistry</a> |
+            <a href="#">Biology</a> |
+            <a href="#"> Maths </a>
+        </p>
+        <p class="additional-info">Coaching is available from class 7th only.</p>
+    </div>
+
+    <div class="contact">
+        <p>Enrollment going on! Please contact the founder for further details:</p>
+        <p>Phone Number: 6289765601</p>
+        <p> Pls check our second website for our terms and conditions</p>
+        <p> Also check our second website for syllabus</p>
+       <p> Link of our second website </p>
+<a href="file:///C:/Users/USER/OneDrive/Desktop/!DOCTYPE%20html2.html">link text</a>
+
+       
+    </div>
+
+    <div class="dialog-box">
+
+
+        <button onclick="showEnrollmentDetails()">
+            Click here for enrollment details
+        </button>
+    </div>
+    
+    <div class="founder">
+        <p>Founder: Suman Ghosh</p>
+    </div>
+    
+    <div class="public-note">
+        <p>This website is public.</p>
+    </div>
+</div>
+
+<div class="enrollment-content">
+    <div class="details">
+        <h2>Course Fees</h2>
+        <p>Physics: ₹500</p>
+        <p>Chemistry: ₹500</p>
+        <p>Biology: ₹500</p>
+        <<p>Math: ₹500</p>
+        <p class="additional-info">Please submit a passport size photo, date of birth certificate xerox, and mention your class during enrollment.</p>
+
+
+    </div>
+
+
+
+    <div class="back-button">
+        <button onclick="showMainPage()">
+            Back to Main Page
+        </button>
+    </div>
+</div>
+
+</body>
+</html>
